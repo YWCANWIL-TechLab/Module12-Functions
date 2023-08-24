@@ -14,6 +14,8 @@
  */
 function writeMyNameWithParameters(firstName, middleName = "", lastName) {
     // TODO Finish the function
+    let str1 = firstName + " " + middleName + " " + lastName;
+    let str2 = `${firstName} ${middleName} ${lastName}`;
 }
 
 
@@ -24,18 +26,31 @@ function writeMyNameWithParameters(firstName, middleName = "", lastName) {
  * * Function expressions are anonymous functions assigned to variables
  * 
  */
-const writeYourNameWithParameters;  // TODO
+const writeYourNameWithParameters2 = function(firstName, middleName, lastName) {
+    return `${firstName} ${middleName} ${lastName}`;
+}
 
-
-
+const aPlusB = function(a, b) { return a + b; }
 // TODO Call your function expression on this line or the line after
-
+writeYourNameWithParameters2(firstName, middleName, lastName);
 
 /**
  * Create a function Constructor that creates Person objects.
  * Please name the function Person.
  */
-function(); // TODO
+function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+}
+
+class Person {
+    constructor(first, lastName, age) {
+        this.firstName = first;
+        this.lastName = lastName;
+        this.age = age;
+    }
+}
 
 
 /**
@@ -47,7 +62,13 @@ function(); // TODO
  * 
  * 
  */
-const countUp;  // TODO
+const countUp = (function() {
+    let index = 1;
+    while(index <= 100) {
+        console.log(index);
+        index++;
+    }
+})();  
 
 
 
@@ -56,9 +77,13 @@ const countUp;  // TODO
  * 
  * The function should print out numbers 1 through 100.
  */
-function(){
-    // TODO
-};
+(function countTo100(){
+    let index = 1;
+    while(index <= 100) {
+        console.log(index);
+        index++;
+    }
+})()
 
 
 
@@ -69,7 +94,13 @@ function(){
  * @param  {...any} args 
  */
 function howManyArgs(...args) {
-    // TODO
+    return arguments.length;
 }
+
+
+
+
+
+
 
 

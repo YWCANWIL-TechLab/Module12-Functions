@@ -11,7 +11,7 @@ import { Student } from "./Student";
  * @returns {String}
  */
 function profToObject(prof, obj) {
-    // TODO
+    return prof.teach.apply(obj);
 }
 
 
@@ -28,5 +28,7 @@ function profToObject(prof, obj) {
  */
 function studentToProf(student, professor) {
     // TODO
+    professor.teach.apply(student);
+    student.learn.apply(student);
 }
 

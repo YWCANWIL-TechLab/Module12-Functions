@@ -8,9 +8,11 @@ import { Student } from "./Student.js";
  * If no name is assigned to the Dog, its name should be sprinkles.
  * 
  */
-function () {
-    // TODO
+function Dog(breed="Poodle", notAPug=true) {
+    this.breed = breed;
+    this.notAPug = notAPug;
 }
+const dog1 = new Dog();
 
 
 /**
@@ -25,6 +27,15 @@ function () {
  */
 function returnAnObject(name, age, isUSCitizen) {
     // TODO
+    const person = {
+        myName: name,
+        myAge: age,
+        citizenship: isUSCitizen
+    };
+    person.citizenship = false;
+    person.myAge = 99;
+    person.myName = "Bartholomew";
+    return person;
 }
 
 
@@ -41,9 +52,26 @@ function returnAnObject(name, age, isUSCitizen) {
  * @param {Student} student 
  */
 function copyAndChange(student) {
-    // TODO
+    const myStudent = student;
+    myStudent.firstName = "bertyboi";
+    myStudent.age = 5;
+    return student;
 }
 
 
 // TODO Create an Object using a class Constuctor, not a Function Constructor
 // ! You only need the constructor, no methods needed
+class PoorUglyBartholomew {
+    constructor(first, last, age, ugly) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.ugly = ugly;
+    }
+
+    speak() {
+        return "I'm having a really bad day";
+    }
+    
+}
+
